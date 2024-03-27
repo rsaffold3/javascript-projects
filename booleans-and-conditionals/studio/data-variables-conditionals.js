@@ -28,20 +28,22 @@ let preparedForLiftOff =	true;
 // add logic below to verify the weather status is clear
 
 // Verify shuttle launch can proceed based on above conditions
-if (astronautCount <= 7 && astronautStatus === "ready" && totalMassKg < maximumMassLimit &&
+if (astronautCount < 7 && astronautStatus === "ready" && totalMassKg < maximumMassLimit &&
  fuelTempCelsius > -300 || fuelTempCelsius < -150 && fuelLevel === "100%" && weatherStatus === "clear") {
     console.log("Shuttle ready for launch!");
  } else {
     console.log("Shuttle not ready for launch!");
  }
 
+console.log("--------------------------------------------")
 console.log("Date:",date);
 console.log("Time:",time);
 console.log("Astronaut Count:",astronautCount);
-console.log("Crew Mass:",crewMassKg);
-console.log("Fuel Mass:",fuelMassKg);
-console.log("Shuttle Mass:",shuttleMassKg);
-console.log("Total Mass:", totalMassKg);
-console.log("Fuel Temperature:",fuelTempCelsius);
+console.log("Crew Mass:",crewMassKg, "Kg");
+console.log("Fuel Mass:",fuelMassKg, "Kg");
+console.log("Shuttle Mass:",shuttleMassKg, "Kg");
+console.log("Total Mass:", totalMassKg, "Kg");
+console.log("Fuel Temperature:",fuelTempCelsius,"°C");
 console.log("Weather Status:",weatherStatus);
+console.log("-------------------------------------------")
 console.log("Have a safe trip astronauts!");
